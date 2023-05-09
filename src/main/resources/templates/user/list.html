@@ -3,13 +3,13 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>ユーザー情報一覧</title>
-<link href="">
+  <link href="/css/list.css" rel="stylesheet"></link>
   <meta charset="UTF-8">
 </head>
 <body>
+　<div>
   <h1>ユーザー情報一覧</h1>
-  <div>
-    <a th:href="@{/user/add}">新規登録はこちら</a>
+  <a th:href="@{/user/add}">新規登録はこちら</a>
   </div>
   <table>
     <thead>
@@ -23,17 +23,17 @@
     </tr>
     </thead>
     <tbody>
-      <tr th:each="user : ${userlist}"th:object="${user}">
-        <td class="center" th:text="*{id}"></td>
-        <td th:text="*{name}"></td>
-        <td th:text="*{address}"></td>
-        <td class="center" th:text="*{phone}"></td>
-        <td class="center"
-            th:text="${#dates.format(user.updateDate, 'yyyy/MM/dd')}"></td>
-        <td class="center"
-            th:text="${#dates.format(user.createDate, 'yyyy/MM/dd')}"></td>
-        <td class="center"
-            th:text="${#dates.format(user.deleteDate, 'yyyy/MM/dd')}"></td>
+    <tr th:each="user : ${userlist}" th:object="${user}">
+      <td class="center" th:text="*{id}"></td>
+      <td th:text="*{name}"></td>
+      <td th:text="*{address}"></td>
+      <td class="center" th:text="*{phone}"></td>
+      <td class="center"
+          th:text="${#dates.format(user.updateDate, 'yyyy/MM/dd')}"></td>
+      <td class="center"
+          th:text="${#dates.format(user.createDate, 'yyyy/MM/dd')}"></td>
+      <td class="center"
+          th:text="${#dates.format(user.deleteDate, 'yyyy/MM/dd')}"></td>
       </tr>
     </tbody>
   </table>

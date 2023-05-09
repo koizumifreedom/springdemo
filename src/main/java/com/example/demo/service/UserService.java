@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.xml.crypto.Data;
 import java.util.Date;
 import java.util.List;
 
@@ -22,9 +21,10 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public void Create(UserRequest userRequest) {
+    public void create(UserRequest userRequest) {
         userRepository.save(CreateUser(userRequest));
     }
+
 
     private User CreateUser(UserRequest userRequest) {
         Date now = new Date();
@@ -34,8 +34,7 @@ public class UserService {
         user.setAddress(userRequest.getAddress());
         user.setPhone(userRequest.getPhone());
         user.setCreateDate(now);
-        user.setUpdateData(now);
-
+        user.setUpdateDate(now);
         return user;
     }
 }

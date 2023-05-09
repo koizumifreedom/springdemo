@@ -1,23 +1,19 @@
 package com.example.demo.entity;
 
-import jdk.jfr.DataAmount;
 import lombok.Data;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.data.annotation.Id;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Data
-@Table(name = "user")
+@Table(name = "sampledb")
 public class User implements Serializable {
 
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
 
     @Column(name = "name")
     private String name;
@@ -37,4 +33,6 @@ public class User implements Serializable {
     @Column(name = "delete_date")
     private Date deleteDate;
 
+    public void setUpdateDate(Date now) {
+    }
 }
