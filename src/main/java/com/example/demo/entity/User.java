@@ -10,29 +10,26 @@ import java.util.Date;
 @Table(name = "sampledb")
 public class User implements Serializable {
 
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+        @Id
+        @Column(name = "id")
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Long id;
 
-    @Column(name = "name")
-    private String name;
+        @Column(name = "name")
+        private String name;
 
-    @Column(name = "address")
-    private String address;
+        @Column(name = "address")
+        private String address;
 
-    @Column(name = "phone")
-    private String phone;
+        @Column(name = "phone")
+        private String phone;
 
-    @Column(name = "update_date")
-    private Date updateData;
+        @Column(name = "update_date")
+        private Date updateDate;
 
-    @Column(name = "create_date")
-    private Date createDate;
+        @Column(name = "create_date")
+        private Date createDate;
 
-    @Column(name = "delete_date")
-    private Date deleteDate;
-
-    public void setUpdateDate(Date now) {
+        @Column(name = "delete_date")
+        private Date deleteDate;
     }
-}

@@ -1,18 +1,18 @@
 body {
-  width: 90%
-  }
+    width: 90%;
+}
 
-  table {
+table {
     width: 100%;
     border-collapse: collapse;
     font-size: 12px;
-  }
+}
 
-  table th, table th {
+table th, table td {
     border: 1px solid #ddd;
-    padding:6px;
-  }
+    padding: 6px;
+}
 
-  table th {
+table th {
     background-color: #F2F2F2;
-  }
+}
